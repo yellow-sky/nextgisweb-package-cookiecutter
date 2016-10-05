@@ -1,0 +1,5 @@
+{
+    "component": "umi_zoomi",
+    "package": "nextgisweb_{{ cookiecutter.component }}",
+    "amd_package": "ngw-{{ cookiecutter.component.replace('_', '-') }}"
+}
