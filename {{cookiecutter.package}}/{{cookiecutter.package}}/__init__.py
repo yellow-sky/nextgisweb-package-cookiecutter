@@ -5,8 +5,8 @@
 from __future__ import unicode_literals
 
 from nextgisweb.component import Component, require
-from nextgisweb.models import Base
 
+from .model import Base
 from .util import COMP_ID
 
 
