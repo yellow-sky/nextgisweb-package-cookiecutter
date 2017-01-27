@@ -14,13 +14,20 @@ class {{ component_class }}(Component):
     identity = COMP_ID
     metadata = Base.metadata
 
+    def initialize(self):
+        pass
+    
     @require('resource')
     def setup_pyramid(self, config):
         from . import view, api
         view.setup_pyramid(self, config)
         api.setup_pyramid(self, config)
+        
+    settings_info = (
+        #dict(key='any_key', desc=u"Any key description"),
+    )
 
-
+    
 def pkginfo():
     return dict(components=dict(
         {{ cookiecutter.component }}='{{ cookiecutter.package }}'))
